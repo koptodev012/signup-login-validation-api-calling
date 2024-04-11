@@ -301,7 +301,7 @@ class _Signup_activityState extends State<Signup_activity> {
                   child: Container(
                     height: 50,
                     width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
+                    decoration: BoxDecoration(  
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(10)),
                     child: Center(
