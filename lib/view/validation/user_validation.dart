@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:get/utils.dart';
 
 class UserValidation {
@@ -5,10 +7,12 @@ class UserValidation {
 
   static chatText(String text) {
     if (text.isNum) {
-      print("${text} is a mobile number");
+      // ignore: duplicate_ignore
+      // ignore: avoid_print
+      print("$text is a mobile number");
       which = 1;
     } else if (text.isEmail) {
-      print("${text} is a email address");
+      print("$text is a email address");
       which = 2;
     } else if (text.isEmpty) {
       which = 0;
