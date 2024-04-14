@@ -14,10 +14,9 @@ class _UserProfileScreen extends State<UserProfileScreen> {
   @override
   void initState() {
     fetchUser();
-    // TODO: implement initState
+    
     super.initState();
   }
-  @override
   void fetchUser() async {
     try {
       var dio = Dio();
@@ -56,14 +55,14 @@ class _UserProfileScreen extends State<UserProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff132E39),
-        title: Text(
+        backgroundColor: const Color(0xff132E39),
+        title: const Text(
           "User Details",
           style: TextStyle(color: Colors.white),
         ),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 10),
+            padding: EdgeInsets.only(right: 10),
             child: Icon(
               Icons.logout,
               color: Colors.white,
@@ -75,13 +74,13 @@ class _UserProfileScreen extends State<UserProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Card(
+            const Card(
               color: Colors.white,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: EdgeInsets.all(15.0),
                     child: CircleAvatar(
                       radius: 48, // Image radius
                       backgroundImage: NetworkImage(
@@ -89,7 +88,7 @@ class _UserProfileScreen extends State<UserProfileScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 25.0),
+                    padding: EdgeInsets.only(left: 25.0),
                     child: Text(
                       "Digvijay Patil",
                       style: TextStyle(
@@ -104,10 +103,10 @@ class _UserProfileScreen extends State<UserProfileScreen> {
             // --------------------
             Card(
               color: Colors.white,
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -129,10 +128,10 @@ class _UserProfileScreen extends State<UserProfileScreen> {
             ),
             Card(
               color: Colors.white,
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -154,10 +153,10 @@ class _UserProfileScreen extends State<UserProfileScreen> {
             ),
             Card(
               color: Colors.white,
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -179,10 +178,10 @@ class _UserProfileScreen extends State<UserProfileScreen> {
             ),
             Card(
               color: Colors.white,
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -202,7 +201,7 @@ class _UserProfileScreen extends State<UserProfileScreen> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             

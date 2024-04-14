@@ -15,9 +15,6 @@ class Signin_activity extends StatefulWidget {
 
 class _Signin_activityState extends State<Signin_activity> {
   // ---------------------------------------------------------------------------
-
-  bool isSignIn = false;
-
   TextEditingController emailmobileController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -119,7 +116,7 @@ class _Signin_activityState extends State<Signin_activity> {
                     child: Column(
                       children: [
                         TextFormField(
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                           controller: emailmobileController,
                           onChanged: (text) {
                             UserValidation.chatText(text);
@@ -249,20 +246,16 @@ class _Signin_activityState extends State<Signin_activity> {
                       decoration: BoxDecoration(
                           color: const Color(0xff098395),
                           borderRadius: BorderRadius.circular(10)),
-                      child: Center(
-                        child: isSignIn
-                            ? CircularProgressIndicator(
-                                color: Colors.white,
-                              )
-                            : const Text(
-                                "Log in",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w800,
-                                    wordSpacing: 2),
-                              ),
+                      child: const Center(
+                        child: Text(
+                          "Log in",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                              wordSpacing: 2),
+                        ),
                       ),
                     ),
                   ),

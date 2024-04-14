@@ -19,8 +19,6 @@ class _Signup_activityState extends State<Signup_activity> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  bool isSignUp = false;
-
   void signupPostApi() async {
     try {
       var dio = Dio();
@@ -33,7 +31,7 @@ class _Signup_activityState extends State<Signup_activity> {
         "password": passwordController.text,
         "mob_no": mobileController.text,
       });
- 
+
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
@@ -403,20 +401,16 @@ class _Signup_activityState extends State<Signup_activity> {
                           // color: const Color(0xff098395),
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
-                      child: Center(
-                        child: isSignUp
-                            ? const CircularProgressIndicator(
-                                color: Colors.white,
-                              )
-                            : const Text(
-                                "Sign up",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w800,
-                                    wordSpacing: 2),
-                              ),
+                      child: const Center(
+                        child: Text(
+                          "Sign up",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                              wordSpacing: 2),
+                        ),
                       ),
                     ),
                   ),
